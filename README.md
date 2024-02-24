@@ -1,3 +1,18 @@
+
+# Developer Profile
+
+
+## Mock-Up
+
+![portfolio demo](./Assets/images/02-advanced-css-homework-demo.gif)
+
+## wireframe
+
+![wire frame 1](./Assets/images/wireframe1.png)
+![wire frame 2](./Assets/images/2.png)
+
+------------------------------------
+
 # 02 Advanced CSS: Portfolio
 
 ## Your Task
@@ -47,7 +62,7 @@ THEN I am presented with a responsive layout that adapts to my viewport
 
 The following animation shows the web application's appearance and functionality:
 
-![portfolio demo](./Assets/02-advanced-css-homework-demo.gif)
+![portfolio demo](./Assets/images/02-advanced-css-homework-demo.gif)
 
 
 ## Grading Requirements
