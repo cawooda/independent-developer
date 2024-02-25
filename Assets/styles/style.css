@@ -19,13 +19,7 @@
 }
 
 body {
-    background-color: var(--accent-color);
     line-height: 1.5;
-}
-
-.pageContainer {
-    background-color: var(--white);
-    margin:1%;
 }
 
 img {
@@ -33,8 +27,24 @@ img {
     max-width:100%;
 }
 
+/* The body color is set to provide an outline between the page container and the body. A default line hi
+height which is part of the reset*/
+
+body {
+    background-color: var(--accent-color);
+}
+
+.pageContainer {
+    background-color: var(--white);
+    margin:1%;
+}
+
+/*THe header for a page contains the whole section of Site Title, Navigation and Banner
+image with Page title. */
+
 header {
     background-color: var(--accent-color);
+    width:100%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -43,35 +53,60 @@ header {
     position: relative;
 }
 
-header section {
-    display:flex;
-}
-
-header section img {
-    width:100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height:42vh;
-    background-position: center right;
-    
-}
-
 header h1 {
-    margin: 3vh 1vh 4vh -3vh;
-    color: var(--emphasis);
-    padding: 2vh 4vh 2vh 4vh;
-    
+    align-items: center;
+    flex-grow: 2;
+    padding-left:2vw;
+    color:var(--accent-color);
+    margin-bottom: 2vh;
     background-color: var(--secondary-color);
 }
 
 header nav {
+    display: flex;
     font-size: var(--menuItemsSize);
     color: var(--secondary-color);
+    margin-bottom: 3vh;
+}
+
+header nav ul {
+    display: flex;
+    flex-grow: 2;
+    flex-basis: 2vw;
+    flex-direction: row;
+    flex-wrap: nowrap;
 }
 
 header nav li {
+    flex-basis: 2vw;
+    flex-grow: 2;
+    margin-left:2vw;
+    padding-left: 3vw;
     list-style-type: none;
+    border-bottom: 0.5vh solid var(--secondary-color);
+}
+
+header nav li:hover {
     border-bottom: 1vh solid var(--secondary-color);
+}
+
+/*The flex basis here helps widen the image out to the edge of the viewport*/
+
+header section {
+    flex-basis:100vw;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+header section img {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:42vh;
+    background-position: center right;
+    height: 43vh;
+    width: 100%;
+    object-fit:cover;
 }
 
 header section h2 {
@@ -82,18 +117,6 @@ header section h2 {
     background-color: var(--secondary-color);
     padding: 1vw 3vw 1vw 3vw;
     
-}
-
-header section {
-    display: flex;
-}
-
-
-
-.banner img{
-    height: 43vh;
-    width: 100%;
-    object-fit:cover;
 }
 
 section {
@@ -109,6 +132,18 @@ section h2{
     color: var(--secondary-color);
     padding: 1vh 4vh 1vh 6vh;
     
+}
+
+article {
+
+}
+
+article img {
+
+}
+
+article h3 {
+
 }
 
 article p {
