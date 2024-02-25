@@ -3,14 +3,15 @@
 :root {
     --primary-color: #d0bfc3;
     --secondary-color: #91b8d1;
-    --accent-color: #482728;
+    --accent-color: #684243;
     --text-color: #b87e61;
     --emphasis: #413c58;
     --white: #fff;    
     --menuItemsSize: 1.5rem; 
     --heading2Hero: 2rem;
+    --heading1: 2.5rem;
     --heading2: 2rem;
-    --heading3: 1.5rem;
+    --heading3: 1.7rem;
 }
 
 * {
@@ -24,7 +25,11 @@ body {
 
 img {
     display:block;
-    max-width:100%;
+    
+}
+
+h3 {
+    font-size:     var(--heading3);
 }
 
 /* The body color is set to provide an outline between the page container and the body. A default line hi
@@ -35,8 +40,6 @@ body {
 }
 
 .pageContainer {
-    background-color: var(--white);
-    margin:1%;
 }
 
 /*THe header for a page contains the whole section of Site Title, Navigation and Banner
@@ -56,17 +59,21 @@ header {
 header h1 {
     align-items: center;
     flex-grow: 2;
+    font-size: var(--heading1);
+    line-height: 15vh;
     padding-left:2vw;
     color:var(--accent-color);
-    margin-bottom: 2vh;
+    margin: 2vh 0 2vh 0;
     background-color: var(--secondary-color);
 }
 
 header nav {
+    padding-top: 3vh;
+    padding-bottom: 3vh;
     display: flex;
     font-size: var(--menuItemsSize);
     color: var(--secondary-color);
-    margin-bottom: 3vh;
+    margin: 3vh;
 }
 
 header nav ul {
@@ -87,6 +94,7 @@ header nav li {
 }
 
 header nav li:hover {
+    cursor: pointer;
     border-bottom: 1vh solid var(--secondary-color);
 }
 
@@ -97,6 +105,8 @@ header section {
     display:flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-top:0vw;
+    margin-bottom:0vw;
 }
 
 header section img {
@@ -104,9 +114,9 @@ header section img {
     background-size: cover;
     height:42vh;
     background-position: center right;
-    height: 43vh;
+    height: 36vh;
     width: 100%;
-    object-fit:cover;
+    object-fit:cover; /*ssists in the display of the header banner as a banner*/
 }
 
 header section h2 {
@@ -114,43 +124,118 @@ header section h2 {
     right:2vh;
     bottom:5vh;
     right: 0vh;
-    background-color: var(--secondary-color);
+    margin-right:0vw;
+    background-color: var(--accent-color);
     padding: 1vw 3vw 1vw 3vw;
     
 }
 
+main {
+    background-color: var(--white);
+    margin-right:1%;
+    margin-left:1%;
+}
 section {
     display: flex;
+    margin-bottom: 2vw;
     flex-direction: row;
-    justify-content:space-around;
-    flex-wrap: nowrap;
+    justify-content:end;
+    flex-wrap: wrap;
 }
 
-section h2{
-    
-    font-size: var(--heading2);
-    color: var(--secondary-color);
-    padding: 1vh 4vh 1vh 6vh;
-    
+section article {
+    flex-basis: 30vw;
+    position: relative;
+    padding-bottom: 2vh;
+    margin-top:2vw;
+    margin-bottom:2vw;
 }
 
-article {
 
+section article img {
+    flex-basis: 30vw;
+    max-width:30vw;
+    
 }
 
 article img {
-
+    flex-basis: 100px;
+    margin-left:1vw;
 }
 
-article h3 {
-
-}
-
-article p {
-    border-left: 0.3vw solid var(--emphasis);
+section article.hero img {
+    margin-left:2vw;
+    width: 60vw;
+    min-width:60vw;
     
 }
 
+section h2{
+    font-size: var(--heading2);
+    color: var(--secondary-color);
+    padding: 1vh 4vh 1vh 6vh;
+    margin-right:2vw;
+    border-right: 0.5vw solid var(--text-color);
+    
+}
+
+article p {
+    margin-left:2vw;
+    width: 60vw;
+    min-width:60vw;
+}
 
 
 
+article h3 {
+    margin-left:2w;
+    position: absolute;
+    bottom: 4vh;
+    left:1vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    color: var(--emphasis);
+    background-color: var(--secondary-color);
+}
+
+section article.hero h3 {
+    padding-left: 1vw;
+    left:2vw;
+}
+
+section article.text-only h3 {
+    margin-left:2vw;
+    position: relative;
+    bottom:0;
+    
+    background:none
+}
+
+section article.text-only p {
+    position: relative;
+    bottom:0;
+    
+    background:none
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--text-color);
+}
+
+footer section {
+    display: flex;
+    padding: 2vw 5vw 2vw 5vw;
+}
+
+footer section ul {
+    flex-basis: 20vw;
+    list-style: none;
+} /*lists displayed in the footer*/
+
+div.pageContainer div {
+    background-color: var(--secondary-color);
+    text-align: center;
+    display: block;
+}
