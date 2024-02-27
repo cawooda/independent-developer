@@ -3,7 +3,7 @@
 :root {
     --primary-color: #d0bfc3;
     --secondary-color: #91b8d1;
-    --accent-color: #684243;
+    --accent-color: #7c4d4e;
     --text-color: #b87e61;
     --emphasis: #413c58;
     --light-emphasis-color: #379bda;
@@ -59,28 +59,29 @@ header {
 
 header h1 {
     align-items: center;
-    flex-grow: 2;
+    flex-grow: 0;
     font-size: var(--heading1);
-    line-height: 15vh;
-    padding-left:2vw;
+    padding-right:8%;
+    padding-left:2%;
     color:var(--accent-color);
-    margin: 2vh 0 2vh 0;
+    margin: 2% 0 2% 0;
     background-color: var(--secondary-color);
+    box-shadow: 10px 10px 32px -11px var(--emphasis);
 }
 
 header nav {
-    padding-top: 3vh;
-    padding-bottom: 3vh;
+    padding-top: 3%;
+    padding-bottom: 3%;
     display: flex;
     font-size: var(--menuItemsSize);
     color: var(--secondary-color);
-    margin: 3vh;
+    margin: 3%;
 }
 
 header nav ul {
     display: flex;
-    flex-grow: 2;
-    flex-basis: 2vw;
+    flex-grow: 0;
+    flex-basis: 100px;
     flex-direction: row;
     flex-wrap: nowrap;
 }
@@ -101,7 +102,7 @@ header nav li a {
 
 header nav li:hover {
     cursor: pointer;
-    border-bottom: 1vh solid var(--secondary-color);
+    border-bottom: 25px solid var(--secondary-color);
 }
 
 /*The flex basis here helps widen the image out to the edge of the viewport*/
@@ -133,6 +134,7 @@ header section h2 {
     margin-right:0vw;
     background-color: var(--accent-color);
     padding: 1vw 3vw 1vw 3vw;
+    box-shadow: 10px 10px 32px -11px var(--emphasis);
     
 }
 
@@ -164,9 +166,13 @@ section article {
 
 
 section article img {
-    flex-basis: 30%;
+    flex-basis: 10%;
     
     
+}
+
+article {
+    display: flex;
 }
 
 article img {
@@ -180,8 +186,8 @@ article img {
 
 section article.hero img {
     margin-left:2vw;
-    width: 60vw;
-    height:40vh;
+    width: 60%;
+    height: 30vh;
     min-width:60vw;
     
 }
@@ -198,7 +204,7 @@ section h2{
 }
 
 article p {
-    margin-left:2vw;
+    margin-left:2%;
     width: 60vw;
     min-width:60vw;
 }
@@ -245,12 +251,16 @@ footer {
 }
 
 footer section {
+    flex-direction:column;
+    flex-wrap: wrap;
+    align-content: center;
     display: flex;
-    padding: 2vw 5vw 2vw 5vw;
+    padding: 2% 2% ;
 }
 
 footer section ul {
-    flex-basis: 20vw;
+    text-align: center;
+    flex-grow: 0;
     list-style: none;
 } /*lists displayed in the footer*/
 
@@ -258,4 +268,91 @@ div.pageContainer div {
     background-color: var(--secondary-color);
     text-align: center;
     display: block;
+}
+
+@media screen and (max-width: 960px) {
+    
+    main {
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    section {
+        
+    }
+
+    section article.hero img {
+        width: 100%;
+        
+        
+        
+    }
+
+    section h2 {
+    font-size: var(--heading2);
+    color: var(--secondary-color);
+    padding: 1% 6% 1% 1%;
+    margin-left: 2%;
+    border-right: 0 none var(--text-color);
+    flex-basis: 20%;
+    flex-shrink: 0;
+    flex-grow: 0;
+    }
+    
+    article h3 {
+        position: absolute;
+        bottom: 4vh;
+        padding-left: 2vw;
+        padding-right: 2vw;
+        background-color: var(--secondary-color);
+    }
+
+    section article.text-only h3 {
+        margin-left: 0;
+    }
+    article p {
+        width:auto;
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+
+    article img {
+        outline: none;
+    }
+
+    footer {
+        flex-direction: column;
+    }    
+}
+
+
+@media screen and (max-width: 430px) {
+    
+    main {
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    section {
+        flex-direction: column;
+    }
+
+    section h2 {
+    font-size: var(--heading2);
+    color: var(--secondary-color);
+    padding: 1% 6% 1% 6%;
+    margin-right: 2vw;
+    border-right: 0 none var(--text-color);
+    flex-basis: 20%;
+    flex-shrink: 0;
+    flex-grow: 0;
+    }
+    
+    article p {
+        width:auto;
+    }
+
+    footer {
+        flex-direction: column;
+    }    
 }
