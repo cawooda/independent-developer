@@ -24,6 +24,15 @@ body {
     line-height: 1.5;
 }
 
+a {
+    
+    color:inherit;
+}
+
+li {
+    list-style: none;
+}
+
 img {
     display:block;
     
@@ -166,7 +175,7 @@ section article {
 
 
 section article img {
-    flex-basis: 10%;
+    max-width:60%
     
     
 }
@@ -176,9 +185,9 @@ article {
 }
 
 article img {
-    flex-basis: 100px;
+    
     margin-left:1vw;
-    height:20vh;
+    
     object-fit:cover; 
     outline: 6px solid var(--light-emphasis-color);
     
@@ -186,9 +195,9 @@ article img {
 
 section article.hero img {
     margin-left:2vw;
-    width: 60%;
-    height: 30vh;
-    min-width:60vw;
+    max-width: 800px;
+    
+    
     
 }
 
@@ -282,7 +291,7 @@ div.pageContainer div {
     }
 
     section article.hero img {
-        width: 100%;
+        
         
         
         
