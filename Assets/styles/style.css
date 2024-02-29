@@ -257,6 +257,10 @@ footer {
     background-color: var(--text-color);
 }
 
+footer a {
+    text-decoration: none;
+}
+
 footer section {
     display: flex;
     padding: 2vw 5vw 2vw 5vw;
