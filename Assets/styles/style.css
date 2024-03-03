@@ -50,11 +50,26 @@ header {
     background-color: var(--accent-color);
     width:100%;
     display: flex;
+
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
-    align-items: center;
+    
     position: relative;
+}
+
+header section {
+    justify-content: center;
+    margin-top:0vw;
+    margin-bottom:0vw;
+}
+
+header.siteHeader {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 au;
+
 }
 
 header h1 {
@@ -71,18 +86,15 @@ header h1 {
 header nav {
     padding-top: 3vh;
     padding-bottom: 3vh;
-    display: flex;
     font-size: var(--menuItemsSize);
     color: var(--secondary-color);
     margin: 3vh;
 }
 
 header nav ul {
-    display: flex;
-    flex-grow: 2;
-    flex-basis: 2vw;
-    flex-direction: row;
-    flex-wrap: nowrap;
+    width: 100%;
+    
+    
 }
 
 header nav li {
@@ -106,14 +118,7 @@ header nav li:hover {
 
 /*The flex basis here helps widen the image out to the edge of the viewport*/
 
-header section {
-    flex-basis:100vw;
-    display:flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top:0vw;
-    margin-bottom:0vw;
-}
+
 
 header section img {
     background-repeat: no-repeat;
@@ -143,6 +148,7 @@ main {
 }
 section {
     display: flex;
+    flex-direction: column;
     margin-bottom: 2vw;
     flex-direction: row;
     align-content:baseline;
@@ -151,6 +157,7 @@ section {
 }
 
 section article {
+    flex-direction: column;
     flex-basis: 30%;
     flex-grow: 0;
     flex-shrink: 0;
@@ -253,28 +260,121 @@ section article.text-only p {
 
 footer {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     background-color: var(--text-color);
+    
 }
 
 footer a {
     text-decoration: none;
 }
 
-footer section {
+footer ul {
+    margin-right:auto;
+    margin-left:auto;
+    width: 100%;
+    max-width:300px;
+    min-width: 200px;
     display: flex;
-    padding: 2vw 5vw 2vw 5vw;
+    justify-content:flex-end;
+    flex-wrap: wrap;
+    list-style:none;
 }
 
-footer section ul {
-    flex-basis: 20vw;
-    list-style: none;
-} /*lists displayed in the footer*/
+footer li {
+    text-align: center;
+    width:100%;
+}
+
+ /*lists displayed in the footer*/
 
 div.footer-box {
     background-color: var(--secondary-color);
     text-align: center;
     display: block;
+}
+
+@media all and (min-width: 1024px) and (max-width: 1280px) { 
+    section h2 {
+        border-right: 0.5vw solid var(--text-color);
+        border-bottom: none;
+    }
+    section article.hero img {
+        
+    }
+    footer {
+        flex-direction: row;
+        fled-wrap:wrap;
+    }
+    footer ul {
+       flex: 0 1 auto; 
+       border-right: 0.2vh solid var(--secondary-color);   
+       
+       margin:auto;
+    }
+    footer ul:last-child {
+        flex: 0 1 auto; 
+        border-right: none;
+        margin:auto;
+     }
+    
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px) { 
+    section {
+        
+    }
+
+    section {
+        
+    }
+
+    section h2 {
+        width:100%;
+        text-align: center;
+        width: 100%;
+    }
+    footer{
+        
+        
+    }
+    footer ul {
+        width:auto;
+        border-top: 0.2vh solid var(--secondary-color); 
+        padding-top:3%;
+        padding-bottom: 3%;
+    }
+
+    
+}
+
+@media all and (min-width: 480px) and (max-width: 768px) { 
+    
+    section h2 {
+        width: 100%;
+        text-align: center;
+        
+    }
+ 
+    footer ul {
+        border-bottom: 0.2vh solid var(--secondary-color);
+        padding-top: 3%;
+        padding-bottom: 3%;
+        
+    }
+}
+
+@media all and (max-width: 480px) { 
+    section {
+        
+    }
+    section h2 {
+        width:100%;
+        text-align: center;
+        
+    }
+    
 }
 
 @keyframes slideInFromLeft {
