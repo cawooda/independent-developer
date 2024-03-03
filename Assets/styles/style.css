@@ -20,12 +20,16 @@
     margin:0;
 }
 
+html {
+    width: 100vw;
+}
+
 body {
     line-height: 1.5;
 }
 
 img {
-    display:block;
+    
     
 }
 
@@ -41,6 +45,7 @@ body {
 }
 
 .pageContainer {
+    width: auto;
 }
 
 /*THe header for a page contains the whole section of Site Title, Navigation and Banner
@@ -49,26 +54,20 @@ image with Page title. */
 header {
     background-color: var(--accent-color);
     width:100%;
-    display: flex;
-
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-    
     position: relative;
 }
 
 header section {
-    justify-content: center;
+    
     margin-top:0vw;
     margin-bottom:0vw;
 }
 
 header.siteHeader {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    flex: 1 1 au;
+    
+    
+    
+    
 
 }
 
@@ -118,27 +117,32 @@ header nav li:hover {
 
 /*The flex basis here helps widen the image out to the edge of the viewport*/
 
+header div {
+    width:100%;
+}
 
-
-header section img {
-    background-repeat: no-repeat;
-    background-size: cover;
-    height:42vh;
-    background-position: center right;
-    height: 36vh;
+header img {
     width: 100%;
+    background-position: center right;
+    height: 20vh;
+    
     object-fit:cover; /*ssists in the display of the header banner as a banner*/
 }
 
-header section h2 {
+
+
+header h2 {
+    width:100%;
     position: absolute;
-    right:2vh;
-    bottom:5vh;
-    right: 0vh;
-    margin-right:0vw;
-    background-color: var(--accent-color);
-    padding: 1vw 3vw 1vw 3vw;
-    
+    margin-left: 4%;
+    padding-left: 4%;
+    bottom:10%;
+    left:4%;
+    background-color: var(--text-color);
+}
+
+header section.banner {
+    display: block;
 }
 
 main {
@@ -156,6 +160,15 @@ section {
     
 }
 
+section div {
+    width:60%;
+    
+    display: flex;
+    justify-content: space-between;
+    align-content:space-around;
+    flex-wrap: wrap;
+}
+
 section article {
     flex-direction: column;
     flex-basis: 30%;
@@ -171,7 +184,8 @@ section article {
 
 
 section article img {
-    flex-basis: 30%;
+    flex-basis: 30vh;
+    
     margin:20px;
 }
 
@@ -191,18 +205,20 @@ section article img {
 
 article img {
     flex-basis: 100px;
-    margin-left:1vw;
-    height:20vh;
+    margin-left:30vw;
+    width: 100vw;
+    max-width: 40vh;
     object-fit:cover; 
-    outline: 6px solid var(--light-emphasis-color);
+    outline: 8px solid var(--light-emphasis-color);
     
 }
 
 section article.hero img {
-    margin-left:2vw;
-    width: 60vw;
-    height:40vh;
-    min-width:60vw;
+    margin-left:30vw;
+    flex-basis: 300px;
+    max-width: 60vw;
+
+    
     
 }
 
@@ -226,11 +242,11 @@ article p {
 
 
 article h3 {
-    margin-left:2w;
+    
     
     position: absolute;
-    bottom: 4vh;
-    left:1vw;
+    bottom: 7vh;
+    left:6vw;
     padding-left: 2vw;
     padding-right: 2vw;
     color: var(--emphasis);
@@ -240,7 +256,7 @@ article h3 {
 
 section article.hero h3 {
     padding-left: 1vw;
-    left:2vw;
+    left:30vw;
 }
 
 section article.text-only h3 {
@@ -300,12 +316,13 @@ div.footer-box {
         border-right: 0.5vw solid var(--text-color);
         border-bottom: none;
     }
+
     section article.hero img {
         
     }
     footer {
         flex-direction: row;
-        fled-wrap:wrap;
+        flex-wrap:wrap;
     }
     footer ul {
        flex: 0 1 auto; 
@@ -322,19 +339,21 @@ div.footer-box {
 }
 
 @media all and (min-width: 768px) and (max-width: 1024px) { 
-    section {
-        
+    header section {
+        justify-content:flex-end;
     }
 
     section {
-        
+        flex-direction: column;
+        justify-content: center;
     }
 
     section h2 {
-        width:100%;
+        border-right:none;
         text-align: center;
-        width: 100%;
     }
+
+    
     footer{
         
         
@@ -354,8 +373,23 @@ div.footer-box {
     section h2 {
         width: 100%;
         text-align: center;
+        flex-direction: column;
+        border-right:none;
+        text-align: center;
+    }
+
+    section {
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-content: space-around;
+    }
+
+    section img {
         
     }
+
+    
  
     footer ul {
         border-bottom: 0.2vh solid var(--secondary-color);
@@ -367,12 +401,16 @@ div.footer-box {
 
 @media all and (max-width: 480px) { 
     section {
-        
+        flex-direction: column;
     }
     section h2 {
         width:100%;
         text-align: center;
         
+    }
+
+    header nav {
+
     }
     
 }
