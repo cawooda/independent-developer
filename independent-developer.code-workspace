@@ -1,0 +1,28 @@
+{
+	"folders": [
+		{
+			"name": "independent-developer",
+			"path": "."
+		},
+		{
+			"name": "_javascript",
+			"path": "../../Downloads/bulma-start-0.0.5/_javascript"
+		},
+		{
+			"name": "_sass",
+			"path": "../../Downloads/bulma-start-0.0.5/_sass"
+		},
+		{
+			"name": "css",
+			"path": "../../Downloads/bulma-start-0.0.5/css"
+		},
+		{
+			"name": "lib",
+			"path": "../../Downloads/bulma-start-0.0.5/lib"
+		}
+	],
+	"settings": {
+		"liveServer.settings.port": 5502,
+		"liveServer.settings.multiRootWorkspaceName": "independent-developer"
+	}
+}
