@@ -12,3 +12,8 @@
   .hero-background.is-transparent {
     opacity: 0.3;
   }
+
+  .card-image:first-child img {
+    border-top-left-radius: 9999 !important;
+    border-top-right-radius: 9999 !important;
+  }
